@@ -1,0 +1,17 @@
+{
+  "name": "FakturaFilExtention",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Changes text color on fakturafil.dk",
+  "background": {
+    "service": "worker.js"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["*://fakturafil.dk//*"],
+  "content_scripts": [
+    {
+      "matches": ["https://fakturafil.dk/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
